@@ -38,7 +38,7 @@ const MediaUploader = ({
       title: 'Image uploaded successfully',
       description: '1 credit was deducted from your account',
       duration: 5000,
-      className: 'success-toast' 
+      className: 'success-toast'
     })
   }
 
@@ -47,13 +47,13 @@ const MediaUploader = ({
       title: 'Something went wrong while uploading',
       description: 'Please try again',
       duration: 5000,
-      className: 'error-toast' 
+      className: 'error-toast'
     })
   }
 
   return (
     <CldUploadWidget
-      uploadPreset="jsm_imaginify"
+      uploadPreset="aklletwt"
       options={{
         multiple: false,
         resourceType: "image",
@@ -70,7 +70,7 @@ const MediaUploader = ({
           {publicId ? (
             <>
               <div className="cursor-pointer overflow-hidden rounded-[10px]">
-                <CldImage 
+                <CldImage
                   width={getImageSize(type, image, "width")}
                   height={getImageSize(type, image, "height")}
                   src={publicId}
@@ -81,17 +81,17 @@ const MediaUploader = ({
                 />
               </div>
             </>
-          ): (
+          ) : (
             <div className="media-uploader_cta" onClick={() => open()}>
               <div className="media-uploader_cta-image">
-                <Image 
+                <Image
                   src="/assets/icons/add.svg"
                   alt="Add Image"
                   width={24}
                   height={24}
                 />
               </div>
-                <p className="p-14-medium">Click here to upload image</p>
+              <p className="p-14-medium">Click here to upload image</p>
             </div>
           )}
         </div>
